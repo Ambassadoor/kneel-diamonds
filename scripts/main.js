@@ -1,6 +1,8 @@
 import { MetalOptions } from "./MetalOptions.js";
+import { handleRadioChange } from "./radioChangeHandler.js";
 
 const render = async () => {
+
     const metalOptions = await MetalOptions()
 
     const html = `
@@ -13,6 +15,7 @@ const render = async () => {
         </article>
     `
     document.querySelector("body").innerHTML = html
+    document.querySelector(".choices").addEventListener("change", handleRadioChange)
 }
 
 render()
