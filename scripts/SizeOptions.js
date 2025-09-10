@@ -1,15 +1,15 @@
 export const SizeOptions = async () => {
-    const response = await fetch("http://localhost:8088/styles")
-    const styles = await response.json()
+    const response = await fetch("http://localhost:8088/sizes")
+    const sizes = await response.json()
 
     let html = `
-        <div class="styles">
-            <h2>Styles</h2>
+        <div class="sizes">
+            <h2>Sizes</h2>
     `
 
-    styles.forEach((style) => {
+    sizes.forEach((size) => {
         html += `
-            <input type="radio" id=${style.id} name="style" value=${style.style}>${style.style}
+            <input type="radio" id=${size.id} name="size" value=${size.carets}>${size.carets}
         `
     })
 
