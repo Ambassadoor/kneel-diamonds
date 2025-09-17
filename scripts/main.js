@@ -23,6 +23,12 @@ const render = async () => {
                 ${styleOptions}
             </section>
         </article>
+        <article class="order">
+        
+        </article>
+        <article class="customerOrders">
+        
+        </article>
     `
     document.querySelector("body").innerHTML = html
     document.querySelector(".choices").addEventListener("change", handleRadioChange)

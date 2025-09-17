@@ -9,7 +9,7 @@ export const SizeOptions = async () => {
 
     sizes.forEach((size) => {
         html += `
-            <input type="radio" id=${size.id} name="size" value=${size.carets}>${size.carets}
+            <input type="radio" name="size" value=${size.id}>${size.carets}
         `
     })
 
