@@ -3,18 +3,17 @@ export const SizeOptions = async () => {
     const sizes = await response.json()
 
     let html = `
-        <div class="sizes">
             <h2>Sizes</h2>
     `
 
     sizes.forEach((size) => {
         html += `
+        <div>
             <input type="radio" name="sizeId" value=${size.id}>${size.carets}
+        </div>
         `
     })
 
-
-    html += `</div>`
 
     return html
 }

@@ -3,15 +3,15 @@ export const MetalOptions = async () => {
     const metals = await response.json()
 
     let html = `
-        <div id="metalOptions">
             <h2>Metals</h2>
     `
 
     metals.forEach((metal) => {
-        html += `<input type="radio" name="metalId" value=${metal.id}>${metal.metal}`
+        html += `<div>
+        <input type="radio" name="metalId" value=${metal.id}>${metal.metal}
+        </div>`
     })
 
-    html += `</div>`
 
     return html
 

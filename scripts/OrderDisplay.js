@@ -9,9 +9,10 @@ if (response.ok) {
     orders.forEach(order => {
         const id = order.id
         const total = order.metal.price + order.style.price + order.size.price
+        const price = total.toLocaleString("en-US", { style: "currency", currency: "USD"})
 
         html += `<div class="order">
-            <p>Order #${id} cost $${total}</p>
+            <p>Order #${id} cost ${price}</p>
         </div>`
 
         
