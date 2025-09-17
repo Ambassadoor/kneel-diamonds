@@ -29,4 +29,4 @@ const createOrder = async (item) => {
     }
 }
 
-export const handleCreate = () => {createOrder(currentItem)}
+export const handleCreateOrder = () => {createOrder(currentItem)}
