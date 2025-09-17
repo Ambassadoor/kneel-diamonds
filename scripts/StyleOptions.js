@@ -8,7 +8,7 @@ export const StyleOptions = async () => {
     `
 
     styles.forEach((style) => {
-        html += `<input type="radio" name="style" value=${style.id}>${style.style}`
+        html += `<input type="radio" name="styleId" value=${style.id}>${style.style}`
     })
 
     html += `</div>`

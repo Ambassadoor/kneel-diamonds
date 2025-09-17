@@ -1,7 +1,7 @@
 let currentItem = {
-    style: null,
-    size: null,
-    metal: null,
+    styleId: null,
+    sizeId: null,
+    metalId: null,
     timestamp: null
 }
 

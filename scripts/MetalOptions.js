@@ -8,7 +8,7 @@ export const MetalOptions = async () => {
     `
 
     metals.forEach((metal) => {
-        html += `<input type="radio" name="metal" value=${metal.id}>${metal.metal}`
+        html += `<input type="radio" name="metalId" value=${metal.id}>${metal.metal}`
     })
 
     html += `</div>`

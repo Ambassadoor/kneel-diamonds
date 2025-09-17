@@ -72,11 +72,25 @@
   ],
   "orders": [
     {
-      "style": "2",
-      "size": "2",
-      "metal": "1",
-      "timestamp": "2025-09-17T00:32:56.981Z",
+      "styleId": 1,
+      "sizeId": 1,
+      "metalId": 1,
+      "timestamp": "2025-09-17T01:45:54.259Z",
       "id": 1
+    },
+    {
+      "styleId": "2",
+      "sizeId": "2",
+      "metalId": "1",
+      "timestamp": "2025-09-17T01:52:13.036Z",
+      "id": 2
+    },
+    {
+      "styleId": "1",
+      "sizeId": "4",
+      "metalId": "3",
+      "timestamp": "2025-09-17T01:52:19.972Z",
+      "id": 3
     }
   ]
 }

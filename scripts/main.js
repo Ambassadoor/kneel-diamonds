@@ -4,6 +4,7 @@ import { SizeOptions} from "./SizeOptions.js";
 import { StyleOptions } from "./StyleOptions.js";
 import { handleCreateOrder } from "./currentItemState.js";
 import { handleRadioChange } from "./radioChangeHandler.js";
+import { OrderDisplay } from "./OrderDisplay.js";
 
 const render = async () => {
 
@@ -11,6 +12,7 @@ const render = async () => {
     const sizeOptions = await SizeOptions();
     const styleOptions = await StyleOptions()
     const orderButton = createOrderButton();
+    const orderDisplay = await OrderDisplay();
 
     const html = `
         <h1>Kneel Diamonds</h1>
@@ -31,7 +33,7 @@ const render = async () => {
         
         </article>
         <article class="customerOrders">
-        
+            ${orderDisplay}
         </article>
     `
     document.querySelector("body").innerHTML = html
@@ -39,6 +41,7 @@ const render = async () => {
     document.querySelector("#order_button").addEventListener("click", handleCreateOrder )
     document.addEventListener("newOrder", () => {
         console.log("New Order Created")
+        render()
     })
 }
 
