@@ -8,6 +8,7 @@ let currentItem = {
 
 export const updateCurrentItem = (key, value) => {
     currentItem[key] = value
+    console.log(currentItem)
 }
 
 const createOrder = async (item) => {
