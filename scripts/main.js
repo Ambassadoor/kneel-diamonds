@@ -33,6 +33,7 @@ const render = async () => {
         
         </article>
         <article class="customerOrders">
+            <h2>Custom Jewelry Orders</h2>
             ${orderDisplay}
         </article>
     `
