@@ -1,4 +1,9 @@
+import { getTransientState } from "./currentItemState.js"
+
 export const MetalOptions = async () => {
+
+    const currentMetal = Number(getTransientState().metalId)
+    
     const response = await fetch("http://localhost:8088/metals")
     const metals = await response.json()
 
@@ -7,8 +12,9 @@ export const MetalOptions = async () => {
     `
 
     metals.forEach((metal) => {
+
         html += `<div>
-        <input type="radio" name="metalId" value=${metal.id}>${metal.metal}
+        <input type="radio" name="metalId" value=${metal.id} ${metal.id === currentMetal ? "checked" : ""}>${metal.metal}
         </div>`
     })
 

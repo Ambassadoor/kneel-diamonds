@@ -6,7 +6,7 @@ import { handleCreateOrder } from "./currentItemState.js";
 import { handleRadioChange } from "./radioChangeHandler.js";
 import { OrderDisplay } from "./OrderDisplay.js";
 
-const render = async () => {
+export const render = async () => {
 
     const metalOptions = await MetalOptions()
     const sizeOptions = await SizeOptions();
@@ -44,6 +44,9 @@ const render = async () => {
         console.log("New Order Created")
         render()
     })
+
 }
 
 render()
+
+    document.addEventListener("optionSelect", render)

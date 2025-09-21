@@ -1,4 +1,9 @@
+import { getTransientState } from "./currentItemState.js"
+
 export const SizeOptions = async () => {
+
+    const currentSize = Number(getTransientState().sizeId)
+
     const response = await fetch("http://localhost:8088/sizes")
     const sizes = await response.json()
 
@@ -9,7 +14,7 @@ export const SizeOptions = async () => {
     sizes.forEach((size) => {
         html += `
         <div>
-            <input type="radio" name="sizeId" value=${size.id}>${size.carets}
+            <input type="radio" name="sizeId" value=${size.id} ${size.id === currentSize ? "checked" : ""}>${size.carets}
         </div>
         `
     })

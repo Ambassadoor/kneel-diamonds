@@ -1,3 +1,4 @@
+
 let currentItem = {
     styleId: null,
     sizeId: null,
@@ -9,6 +10,8 @@ let currentItem = {
 export const updateCurrentItem = (key, value) => {
     currentItem[key] = value
     console.log(currentItem)
+    document.dispatchEvent(new CustomEvent("optionSelect"))
+
 }
 
 const createOrder = async (item) => {
@@ -26,7 +29,12 @@ const createOrder = async (item) => {
     if (response.ok) {
         const orderEvent = new CustomEvent("newOrder")
         document.dispatchEvent(orderEvent)
+        Object.keys(currentItem).forEach((key) => currentItem[key] = null)
     }
 }
 
 export const handleCreateOrder = () => {createOrder(currentItem)}
+
+export const getTransientState = () => {
+    return currentItem
+}

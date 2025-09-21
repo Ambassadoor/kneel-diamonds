@@ -1,4 +1,8 @@
+import { getTransientState } from "./currentItemState.js"
+
 export const StyleOptions = async () => {
+
+    const currentStyle = Number(getTransientState().styleId)
     const response = await fetch("http://localhost:8088/styles")
     const styles = await response.json()
 
@@ -9,7 +13,7 @@ export const StyleOptions = async () => {
     styles.forEach((style) => {
         html += `
         <div>
-            <input type="radio" name="styleId" value=${style.id}>${style.style}
+            <input type="radio" name="styleId" value=${style.id} ${style.id === currentStyle ? "checked" : ""}>${style.style}
         </div>`
     })
 
