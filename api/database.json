@@ -70,6 +70,23 @@
       "price": 1241
     }
   ],
+  "types": [
+    {
+      "id": 1,
+      "type": "Ring",
+      "multiplier": 1
+    },
+    {
+      "id": 2,
+      "type": "Earing",
+      "multiplier": 2
+    },
+    {
+      "id": 3,
+      "type": "Necklace",
+      "multiplier": 4
+    }
+  ],
   "orders": [
     {
       "styleId": 1,
@@ -105,6 +122,38 @@
       "metalId": "1",
       "timestamp": "2025-09-21T02:36:31.894Z",
       "id": 5
+    },
+    {
+      "styleId": "1",
+      "sizeId": "1",
+      "metalId": "1",
+      "timestamp": "2025-09-21T02:56:49.952Z",
+      "type": "4",
+      "id": 6
+    },
+    {
+      "styleId": "1",
+      "sizeId": "1",
+      "metalId": "1",
+      "timestamp": "2025-09-21T02:57:05.823Z",
+      "type": "1",
+      "id": 7
+    },
+    {
+      "styleId": "1",
+      "sizeId": "1",
+      "metalId": "1",
+      "timestamp": "2025-09-21T02:58:12.775Z",
+      "type": "1",
+      "id": 8
+    },
+    {
+      "styleId": "1",
+      "sizeId": "3",
+      "metalId": "1",
+      "timestamp": "2025-09-21T02:58:59.689Z",
+      "type": "1",
+      "id": 9
     }
   ]
 }

@@ -3,7 +3,8 @@ let currentItem = {
     styleId: null,
     sizeId: null,
     metalId: null,
-    timestamp: null
+    timestamp: null,
+    type: "1"
 }
 
 
